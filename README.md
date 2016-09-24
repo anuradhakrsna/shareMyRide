@@ -1,5 +1,5 @@
 # shareMyRide
-A car-pooling node.js project run on local server such as express and mongoDB as database.
+This is a highly accessible and a highly secure car-pooling node.js project(website) with multi-platform support, run on local server such as express and a database such as MongoDB.
  Step1 : If you see the Package.JSON file we can see the respective NPM packages required to be installed and this in turn would be forming the the node modules folder without which the car-pooling website cannot be launched.
  
  step2: Open you command prompt Directing to the folder where you have downloaded and saved your latest folder of the car-ppolig project.In the command prompt you install the node package manager and the go ahead and download the other packes required to run our website in your local host.
