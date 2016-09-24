@@ -1,0 +1,184 @@
+<section class="row">
+	<div class="col-sm-2 col-md-2 col-lg-2 menubar-part"></div>
+	<div class="col-sm-10 col-md-10 col-lg-10 sign-up-details">
+		<form id="providersignup-form" onsubmit="return validateForm()" method="post" action="/signup/memberSignup" enctype="multipart/form-data">
+		<input type="hidden" id="createorUpdateBack" name="createorUpdateBack" value={{createorUpdate}}>
+		<div id="personalInfo" class="signUp-sub-info">
+			<h1 id="wishText" class="signUp-sub-info-heading">Do you wish to sign up as</h1>
+			<!--<h1 class="signUp-sub-info-heading">Do you wish to update as</h1>-->
+        <!--<label  class="control-label signup-form-labels">Do you wish to sign up as </label>-->
+	        <div class="radio form-group row form-grp-div">
+	            <label class="control-label signup-form-labels"><input id="radioProvider" type="radio" name="oneRadio" checked="checked">Ride Provider</label>
+	        </div>
+	        <div class="radio form-group row form-grp-div">
+	            <label class="control-label signup-form-labels"><input id="radioSeeker" type="radio" name="oneRadio">Ride Seeker</label>
+	        </div>
+	    </div>
+		<div id="personalInfo" class="signUp-sub-info">
+			<h1 class="signUp-sub-info-heading">Personal Details</h1>
+		        <div class="form-group hidden " id="sp-error-container">
+			        	<div class="alert alert-danger text-goes-here" id="sp-error-text" ></div>
+		        </div>
+				<input type="hidden" id="checkCar" name="checkCar" value="Y">
+				<input type="hidden" id="checkCarBack" name="checkCarBack" value="{{checkCar}}">
+			    <div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="firstname">First Name: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.Philip" id="firstname" name="firstname" value="{{firstname}}">
+				    </div>
+			    </div>
+			    <div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="lastname">Last Name: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.Baressi" id="lastname" name="lastname" value="{{lastname}}">
+				    </div>
+			    </div>
+			    <div class="form-group row form-grp-div">
+			    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels">Gender: </label>
+			    	<label class="radio-inline signup-form-labels">
+					  <input type="radio" id="genderm" name="gender" value="Male" checked> Male
+					</label>
+					<label class="radio-inline signup-form-labels">
+					  <input type="radio" id="genderf" name="gender" value="Female" > Female
+					</label>
+			    </div>
+			    <div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="email">Email Id: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				       <input type="email" class="form-control" id="email" name="email" placeholder="someone@abc.com" value="{{email}}">
+				    </div>
+			    </div>
+			    <div class="form-group row form-grp-div">
+				    <label for="password" class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels">Password:</label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				      <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="{{password}}">
+				    </div>
+				</div>
+				<div class="form-group row form-grp-div">
+				    <label for="c-password" class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels">Confirm Password:</label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				      <input type="password" class="form-control"  id="c-password" name="password" placeholder="Password" value="{{password}}">
+				    </div>
+				</div>
+			    <div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="phone_number">Contact No: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				       <input  type="text" class="form-control"  placeholder="(+1) 777-333-8888" id="phone_number" name="phone_number" value="{{phone_number}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="dl_number">Driving License Number: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.ABCD999TR" id="dl_number" name="dl_number" value="{{dl_number}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="door_no">Door No: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.34" id="door_no" name="door_no" value="{{door_no}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="apt">Apartment: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.H" id="apt" name="apt" value="{{apt}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="street">Street: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.Castle Point" id="street" name="street" value="{{street}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="city">City: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.Hoboken" id="city" name="city" value="{{city}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="state">State: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.NJ" id="state" name="state" value="{{state}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="zip">Zip: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="number" class="form-control" placeholder="eg.07608" id="zip" name="zip" value="{{zip}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				     <label for="profilePicId" class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels">Profile Picture</label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+					    <input type='file' id="profilePicId" name = "displayImage" value={{profilePic}} />
+					    <img style="height:50px;width:50px;float:left;" id="blah" src="#" alt="your image" />
+					    <p class="help-block">The picture can .png or .jpg format</p>
+				    </div>
+				</div>
+		</div>
+		<div id="carInfo" class="signUp-sub-info">
+			<h1 class="signUp-sub-info-heading">Car Details</h1>
+			    <div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="carname">Car Name: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.Honda Accord" id="carname" name="carname" value="{{carname}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="make_year">Make Year: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="number" class="form-control" placeholder="eg.2016" id="make_year" name="make_year" value="{{make_year}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="regist_number">Registration Number: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.A89-MCD" id="regist_number" name="regist_number" value="{{regist_number}}">
+				    </div>
+			    </div>
+				<div class="form-group row form-grp-div">
+				    <label  class="col-sm-3 col-md-3 col-lg-3 control-label signup-form-labels" for="color">Color: </label>
+				    <div class="col-sm-6 col-md-6 col-lg-6">
+				        <input type="text" class="form-control" placeholder="eg.Red" id="color" name="color" value="{{color}}">
+				    </div>
+			    </div>
+			</div>
+            {{#if error }}
+      				<div class="form-group float-left">
+        				<div class="alert alert-danger p-server-error">
+          					{{ error }}
+        				</div>
+      				</div>
+      			{{/if}}
+
+				{{#if result }}
+      				<div class="form-group float-left">
+        				<div class="alert alert-success p-server-error">
+          					{{ result }}
+        				</div>
+      				</div>
+					<div class="form-group row form-grp-div">
+				    	<div class="col-sm-offset-5 col-md-offset-5 col-lg-offset-5 col-sm-10 col-md-10 col-lg-10">
+				      	<a href="/signin/initial" id="p-signin" style="margin: 0px 0px 0px -28px;" class="btn btn-default">Click here to Sign In</a>
+				    	</div>
+					</div>
+      			{{/if}}
+      			<div class="form-group row form-grp-div">
+	      			<div class="form-group hidden " id="sp-error-container-down">
+				        <div class="alert alert-danger text-goes-here" id="sp-error-text-down" ></div>
+			        </div>
+		        </div>
+		        <div class="form-group row form-grp-div">
+	      			<div class="form-group hidden " id="sp-success-container-down">
+				        <div class="alert alert-success text-goes-here" id="sp-success-text-down" ></div>
+			        </div>
+		        </div>
+			    <div class="form-group row form-grp-div">
+				    <div class="col-sm-offset-5 col-md-offset-5 col-lg-offset-5 col-sm-10 col-md-10 col-lg-10">
+				      <button type="submit" id="p-submit" class="btn btn-default">Submit</button>
+				    </div>
+				</div>
+		</form>
+	</div>
+</section>

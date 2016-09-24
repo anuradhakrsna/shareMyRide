@@ -1,0 +1,79 @@
+<section class="signin row">
+	<div class="col-sm-2"></div>
+    <div class="col-sm-8 col-md-8 col-lg-8  signin-search-part">
+        <div class=" seek-provide-content" id="collapseExample">
+            <div class="well signin-well">
+        		<form id="search-form" method="post" action="/search/searchResult">
+                    <div class="form-group signin-form-group">
+        				<label for="fromlocation">From</label>
+                        <input type="text" class="form-control singin-form-control" id="fromlocation" name="source" placeholder="eg.New Jersey" value="{{firstNumber}}">
+        			</div>
+        			<div class="form-group signin-form-group">
+                        <label for="tolocation">To</label>
+                        <input type="text" class="form-control singin-form-control" id="tolocation" name="destination" placeholder="eg.Virgina" value="{{secondNumber}}">
+                    </div>
+                    <div class="form-group signin-form-group">
+                        <label for="idTourDateDetails">Date</label>
+                        <input type="text" name="idTourDateDetails" id="idTourDateDetails" readonly="readonly" class="form-control clsDatePicker">
+        	            <input type="hidden" name="travelDate" id="idTourDateDetailsHidden">
+                    </div>
+                    <div class="form-group signin-form-group">
+                        <label for="traveltime">Time</label>
+                        <input type="time" name="search_time" class="form-control" id="traveltime" >
+                    </div>
+                    <div class="form-group hidden" id="error-container">
+                        <div class="alert alert-danger text-goes-here">
+                        </div>
+                    </div>
+                    <div class="form-group submit-form-group signin-form-group">
+                        <div id="errfn" style="color:red">   </div>
+                        <button type="submit signin-submit-btn" id="searchbutton" onclick="return validateSearch();" class="btn btn-default">Search</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+	<div class="col-sm-2 col-md-2 col-lg-2 login-part">
+        <div class="login-signup-div float-right">
+            <div class=" logout-div float-right">
+				<span class="float-left signUp-span">
+		            <a href="/signup/logout">Log out</a>
+		        </span>
+            </div>
+
+
+
+
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">Sign In</h1>
+                    <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                </div>
+                <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="l-email" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="l-password" placeholder="Password">
+                      </div>
+                      <div class="error-text hidden" id="l-error-container"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="l-submit" class="btn btn-default">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

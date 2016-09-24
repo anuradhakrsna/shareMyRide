@@ -1,0 +1,47 @@
+<div class="modal fade" id="rideSeekUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title ride-pro-model-title" id="myModalLabel">Update The Booked Ride</h1>
+	        </div>
+	        <div class="modal-body">
+	        	<form class="form-horizontal">
+				    
+				    <div class="form-group">
+					    <label  class="col-sm-6 col-md-6 col-lg-6 control-label ride-pro-form-labels">No.of seats to be booked</label>
+					    <div class="col-sm-4 col-md-4 col-lg-4">
+					        <input type="number" id="noOdSeatsUpdate-s" class="form-control" placeholder="eg.4">
+					    </div>
+				    </div>
+				    <div class="error-text hidden" id="update-error-container-s">
+				    	 <div class="alert alert-danger text-goes-here" id="update-error-text-s" ></div>
+				    </div>
+					<div class="result-text hidden" id="update-result-container-s">
+						<div class="alert alert-success text-goes-here" id="update-result-text-s" ></div>
+					</div>
+				</form>
+	        </div>
+	        <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" id="updatebtn-s" class="btn btn-primary">Update</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<div class="modal fade" id="rideSeekDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title " id="myModalLabel">Are you sure you want to cancel your booking?</h1>
+	        </div>
+	        <div class="modal-footer  yes-no-btn">
+		        <button type="button" class="btn btn-default" id="deleteBtn-s" data-dismiss="modal" >Yes</button>
+		        <button type="button" class="btn btn-default " data-dismiss="modal" >No</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>

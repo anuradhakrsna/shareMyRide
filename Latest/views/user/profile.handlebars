@@ -1,0 +1,53 @@
+<section class="row">
+	<div class="col-sm-2 col-md-2 col-lg-2 menubar-part">	
+		<input type="hidden" id="checkLivalue" name="checkLivalue" value="{{checkListValue}}">
+	    <ul class="nav nav-tabs tabs-left menubar-ul">
+	      <li id="li-profile" class="active"><a href="profile" >My Profile</a></li>
+	      <li id="li-provided"><a href="/user/provided" >Rides Provided</a></li>
+	      <li id="li-seeked"><a href="/user/seeked" >Rides Seeked</a></li>
+	      <li id="li-search"><a href="/search/user" >Search a Ride</a></li>
+	    </ul>
+	</div>
+	<div class="col-sm-10 col-md-10 col-lg-10 user-profile-content">
+		<input type="hidden" id="memberid" name="memberid" value="{{userInfo._id}}">
+		<div class="User-name-img">
+			<img src="/{{userInfo.image_path}}" alt="userName" />
+			<div class="name-details">
+				<h1>Welcome {{userInfo.first_name}} {{userInfo.last_name}}</h1>
+				<h2 class="profile-h2">Email Id:<span class="profile-h2-span"> {{userInfo.email}}<span></h2>
+				<h2 class="profile-h2">Contact No:<span class="profile-h2-span-contact"> {{userInfo.phone_number}}<span></h2>
+
+			</div>
+			<div class=" logout-div float-right">
+				<span class="float-left signUp-span">
+		            <a href="/signup/logout">Log out</a> 
+		        </span>
+		    </div>
+		    <div class="update-delete-button-div">
+				<a id="updateProfile" class="float-right btn btn-primary update-profile-btn" href="/signup/memberupdate">Update Profile</a>
+				<button class="float-right btn btn-danger update-profile-btn" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+			</div>
+		</div>
+		{{> (lookup . 'partials') }}
+	</div>
+	{{> (lookup . 'modals') }}
+</section>
+
+<div class="modal fade" id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h1 class="modal-title " id="myModalLabel">Are you sure to delete your ShareMyRide Account ?</h1>
+        </div>
+		<div class="error-text hidden" id="del-account-errorcontainer">
+			<div class="alert alert-danger text-goes-here" id="del-account-error-text" ></div>
+		</div>
+		
+        <div class="modal-footer  yes-no-btn">
+	        <button type="button" class="btn btn-default" id="deleteAccount" >Yes</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal" >No</button>
+        </div>
+    </div>
+  </div>
+</div>

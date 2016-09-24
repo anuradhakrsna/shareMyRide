@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Share My Ride</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/public/css/jquery-ui.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="websiteHead">Share My Ride</h1>
+    </header>
+    <main class="container">
+                <div class="row">
+            <div>
+                {{{body}}}
+            </div>
+        </div>
+    </main>
+    <footer>
+    	<address>contact us :(+1)-777-888-9999</address>
+    </footer>
+    <script>
+        
+    var a = Math.ceil(Math.random() * 9)+ '';
+    var b = Math.ceil(Math.random() * 9)+ '';
+    var c = Math.ceil(Math.random() * 9)+ '';
+    var d = Math.ceil(Math.random() * 9)+ '';
+    var e = Math.ceil(Math.random() * 9)+ '';
+
+    var code = a + b + c + d + e;
+    document.getElementById("txtCaptcha").value = code;
+    document.getElementById("txtCaptchaDiv").innerHTML = code;
+    </script>
+    <script src="/public/js/tota11y.min.js"></script>
+    <!--<script src="/public/js/signin.js"></script>-->
+     {{> (lookup . 'partial') }}
+</body>
+
+</html>

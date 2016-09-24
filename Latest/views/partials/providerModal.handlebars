@@ -1,0 +1,153 @@
+<div class="modal fade" id="rideProModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog ride-pro-form-dialog" role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title ride-pro-model-title" id="myModalLabel">Provide a Ride</h1>
+	        </div>
+	        <div class="modal-body">
+				<form class="form-horizontal">
+				    <div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="sourStreet">Source Street</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" class="form-control" id="sourStreet" name="sourStreet" placeholder="eg.Castle Point">
+					    </div>
+				    </div>
+					<div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="sourCity">Source City</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" class="form-control" id="sourCity" name="sourCity" placeholder="eg.Hoboken">
+					    </div>
+				    </div>
+					<div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="sourState">Source State</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" class="form-control" id="sourState" name="sourState" placeholder="eg.New Jersey">
+					    </div>
+				    </div>
+				    <div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="destStreet">Destination Street</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" class="form-control" id="destStreet" name="destStreet" placeholder="eg.59 Street">
+					    </div>
+				    </div>
+					<div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="destCity">Destination City</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" class="form-control" id="destCity" name="destCity" placeholder="eg.Brooklyn">
+					    </div>
+				    </div>
+					<div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="destState">Destination State</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" class="form-control" id="destState" name="destState" placeholder="eg.New York">
+					    </div>
+				    </div>
+				    <div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="planDate">Date of Travel</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="text" name="planDate" id="planDate" readonly="readonly" class="form-control clsDatePicker">
+	                       <input type="hidden" name="hiddenplanDate" id="hiddenplanDate">
+					    </div>
+				    </div>
+				    <div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="planTime">Time of Travel</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="time" name="planTime" id="planTime" class="form-control" placeholder="eg.21:00">
+					    </div>
+				    </div>
+					<div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="estTravelTime">Estimated Travel Time (In Hours)</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="number" class="form-control" id="estTravelTime" name="estTravelTime" placeholder="eg.4">
+					    </div>
+				    </div>
+				    <div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="noofSeats">No.of seats</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="number" class="form-control" id="noofSeats" name="noofSeats" placeholder="eg.4">
+					    </div>
+				    </div>
+				    <div class="form-group">
+					    <label  class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels" for="price">Price per co-passenger</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="number" class="form-control" id="price" name="price" placeholder="eg.20">
+					    </div>
+				    </div>
+					<div class="form-group">
+					    <label  for="description" class="col-sm-2 col-md-2 col-lg-2 control-label ride-pro-form-labels">Description</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <textarea class="form-control" id="description" name="description" rows="5"" placeholder="eg.Business trip"></textarea>
+					    </div>
+				    </div>
+					<div class="error-text hidden" id="create-error-container-p">
+						<div class="alert alert-danger text-goes-here" id="create-error-text-p" ></div>
+					</div>
+					<div class="result-text hidden" id="create-result-container-p">
+						<div class="alert alert-success text-goes-here" id="create-result-text-p" ></div>
+					</div>
+					</form>
+				</div>
+	        <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="submit" id="postSubmit" class="btn btn-primary">Post the ride</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+{{#each createdTravelPlan}}
+	<div class="modal fade" id="rideProUpdate-{{this._id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title ride-pro-model-title" id="myModalLabel">Update A Posted Ride</h1>
+	        </div>
+	        <div class="modal-body">
+	        	<form class="form-horizontal">
+				    <div class="form-group">
+					    <label  class="col-sm-4 col-md-4 col-lg-4 control-label ride-pro-form-labels" for="noOfSteatsUpdate-p-{{this._id}}">No.of seats available</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="number" id="noOfSteatsUpdate-p-{{this._id}}" class="form-control" placeholder="eg.4">
+					    </div>
+				    </div>
+				    <div class="form-group">
+					    <label  class="col-sm-4 col-md-4 col-lg-4 control-label ride-pro-form-labels" for="priceUpdate-p-{{this._id}}">Price per co-passenger</label>
+					    <div class="col-sm-6 col-md-6 col-lg-6">
+					        <input type="number" id="priceUpdate-p-{{this._id}}" class="form-control" placeholder="eg.$20">
+					    </div>
+				    </div>
+				    <div class="error-text hidden" id="update-error-container-p-{{this._id}}">
+						<div class="alert alert-danger text-goes-here" id="update-error-text-p-{{this._id}}" ></div>
+					</div>
+					<div class="result-text hidden" id="update-result-container-p-{{this._id}}">
+						<div class="alert alert-success text-goes-here" id="update-result-text-p-{{this._id}}" ></div>
+					</div>
+				</form>
+	        </div>
+	        <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" id="updateBtnSubmit-p-{{this._id}}" class="btn btn-primary">Update</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="rideProDelete-{{this._id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title " id="myModalLabel">Are you sure you want to delete the posted ride ?</h1>
+	        </div>
+			<div class="error-text hidden" id="delete-error-container-p-{{this._id}}">
+				<div class="alert alert-danger text-goes-here" id="delete-error-text-p-{{this._id}}" ></div>
+			</div>
+	        <div class="modal-footer  yes-no-btn">
+		        <button type="button" data-dismiss="modal" id="deleteBtnSubmit-p-{{this._id}}" class="btn btn-default" >Yes</button>
+		        <button type="button" class="btn btn-default " data-dismiss="modal" >No</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+{{/each}}

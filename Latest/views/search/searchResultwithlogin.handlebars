@@ -1,0 +1,226 @@
+<section class="signin row">
+    <div class="col-sm-2"></div>
+	<div class="col-sm-9 col-md-9  user-profile-content">
+
+        <script>
+            $(document).ready(function() {
+            $("form").submit(function(e){
+                var x;
+                if (confirm("sure You want to book this ride !") == true) {
+                    x = "You pressed OK!";
+                } else {
+                    e.preventDefault();
+                }
+
+
+            });
+            });
+
+        </script>
+
+		<!--<button class=" btn btn-danger provide-ride-now">
+			<a href="/search">To seek a ride- <span>Click here!</span></a>
+		</button>-->
+
+		<div class="providedRide-sub-info">
+            <br>
+			<h1 class="sub-info-heading">Search Results</h1>
+
+			<div class="ride-list-section float-left ">
+            {{#each travelplanData}}
+
+            <form id="search-form" method="post" action="/user/seeked">
+				<ul class="seacrh-ul float-left ">
+					<li class="float-left row">
+						<div class="ride-provider-img-div col-sm-3 col-md-3 col-lg-3">
+                        <div class="img-container-div">
+                            <img src="/public/images/default-img.png" alt="Smiley face" class="ride-provider-img"/>
+                        </div>
+                            <div class="float-left age-name-details" style="margin-top:0px !important">
+
+
+
+                                {{#each this.travelprovidermemberdata}}
+                                    <h2> {{this.first_name}} {{this.last_name}}</h2>
+                                    <input type="hidden" name="member_id" value="{{this._id}}" id="idTourDateDetailsHidden">
+
+
+                                <span style="margin-top:-10px;color:black">Gender: {{this.gender}}</span>
+                                    <span style="color:black" >Email: {{this.email}}</span>
+                                    <span style="color:black" >Phone number: {{this.phone_number}}</span>
+                                {{/each}}
+                            </div>
+							<div class="restriction-div">
+								<ul>
+
+								</ul>
+							</div>
+						</div>
+
+
+                        <div class="ride-provider-img-details col-sm-9 col-md-9 col-lg-9">
+                            <div class="travel-info-part">
+                                <span class="trave-day-time-det"> {{this.travel_start_time}}</span>
+                                <div class="source-to-dest">
+                                    <span>{{this.source_city}}</span>
+                                    <span class="glyphicon glyphicon-arrow-right"></span>
+                                    <span>{{this.destination_city}}</span>
+                                </div>
+                                <div class="source-dest-in-detail">
+
+                                    <img src="/public/images/source1.png" alt="source" />
+                    <span>Source : {{this.source_street}} </span><span>,</span> <span>{{this.source_city}}</span>, <span> {{this.source_state}}</span>
+                                </div>
+                                <div class="source-dest-in-detail">
+
+                                    <img src="/public/images/destination.png" alt="source" />
+
+                                    <span>  Destination : {{this.destination_street}} </span>, <span>,{{this.destination_city}}</span> ,<span>, {{this.destination_state}}</span>
+
+                                </div>
+
+                                {{#each this.travelprovidercardata}}
+
+                                    <span class="car-name">
+
+                                  Car Name: {{this.name}},
+                                    Make Year: {{this.make_year}},
+                                   Registration number: {{this.registration_number}},
+                                    Color : {{this.color}}
+
+</span>
+                                {{/each}}
+
+
+                            </div>
+                            <div class="budget-part">
+                                <div class="price-part">
+                                    <span class="price-range">${{this.price}}</span>
+                                    <span >per co-traveller</span>
+                                </div>
+
+                {{#each this.totalseatsalreadybooked}}
+                    <span class="seat-span">
+
+
+                                   {{this}}
+
+
+                        seats left</span>
+
+                {{/each}}
+                                {{#each this.alreadybooked}}
+                                    <div id="errfn" style="color:red">  {{this}}  </div>
+
+
+
+
+
+                                {{/each}}
+                                    {{#each this.seatsover}}
+
+
+                                        {{this}}
+
+
+
+                                    {{/each}}
+
+
+                                     {{#each this.totalseats}}
+                                     <span class="seat-span">
+
+
+
+                                   {{this}}
+
+
+                                         seats left</span>
+
+                                         <br>
+                                         <span >Select seats :</span>
+                                         <select class="btn btn-mini" name="seats_needed" style="margin:0px 0px 0px 20px">
+
+                                                 {{#each ../this.seatsdata}}
+
+
+                                                 <option>  {{this}}</option>
+
+
+                                             {{/each}}
+                                         </select>
+                                         <button type="submit"  data-toggle="modal" title="already a member?" data-target="#myModal" class="btn btn-success update-delete">Book ride</button>
+
+
+
+                                     {{/each}}
+
+
+
+
+
+
+
+                                <input type="hidden" name="description" value="" >
+                                <input type="hidden" name="travel_plan_id" value="{{this._id}}" >
+
+
+                    <!--  <button type="button" data-toggle="modal" data-target="#rideSeekUpdate" class="btn btn-success update-delete">Book ride</button> -->
+
+                            </div>
+
+                        </div>
+                    	</li>
+				</ul>
+            </form>
+            {{/each}}
+			</div>
+
+
+		</div>
+
+	</div>
+
+    <div class="">
+        <div class="login-signup-div float-right">
+            <span class="float-left login-span">
+            <a href="" data-toggle="modal" title="already a member?" data-target="#myModal">LogIn</a>
+
+            </span>
+
+            <img src="/public/images/slash1.jpg" alt="Divider bar" class="slash-login float-left"/>
+
+            <span class="float-left signUp-span">
+                <a href="/signup/membersign" title="not a member still? sign up">SignUp</a>
+            </span>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h1 class="modal-title" id="myModalLabel">Sign In</h1>
+                        <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="l-email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="l-password" placeholder="Password">
+                            </div>
+                            <div class="error-text hidden" id="l-error-container"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="l-submit" class="btn btn-default">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

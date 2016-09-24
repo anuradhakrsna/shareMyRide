@@ -1,0 +1,86 @@
+
+
+<section class="signin row">
+
+    <div class="login-signup-div float-right">
+            <span class="float-left login-span">
+            <a href="" data-toggle="modal" title="already a member?" data-target="#myModal">LogIn</a>
+
+            </span>
+
+        <img src="/public/images/slash1.jpg" alt="Divider bar" class="slash-login float-left"/>
+
+        <span class="float-left signUp-span">
+                <a href="/signup/membersign" title="not a member still? sign up">SignUp</a>
+            </span>
+    </div>
+</section>
+<section class="signin row">
+    <div class="col-sm-2"></div>
+	<div class="col-sm-9 col-md-9  user-profile-content">
+
+
+
+		<div class="providedRide-sub-info">
+            <br>
+			<h1 class="sub-info-heading">Search Results</h1>
+
+			<div class="ride-list-section float-left ">
+
+
+            <form id="search-form" method="post" action="/">
+<br>
+               <h2>No travel plans available for this search criteria. Try searching with different criteria</h2>
+
+                <div class="">
+                    <img src="/public/images/no-results.png" alt="Smiley face" class=""/>
+                </div>
+
+                <button type="submit signin-submit-btn"  class="btn btn-default">Search Again ? </button>
+            </form>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+    <div class="">
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h1 class="modal-title" id="myModalLabel">Sign In</h1>
+                        <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="l-email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="l-password" placeholder="Password">
+                            </div>
+
+                            <font color="#DD0000">Enter Code ></font>
+                            <span id="txtCaptchaDiv" style="background-color:#A51D22;color:#FFF;padding:5px"></span>
+                            <input type="hidden" id="txtCaptcha" />
+                            <input type="text" name="txtInput" id="txtInput" size="15" />
+
+                            <div class="error-text hidden" id="l-error-container"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="l-submit" class="btn btn-default">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

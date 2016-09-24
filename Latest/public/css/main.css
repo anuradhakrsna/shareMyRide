@@ -1,0 +1,827 @@
+body {
+    background: #FEFEFE;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 15pt;
+    min-height: 500px;
+    max-height:auto !important;
+    float:left;
+    width:100%;
+    margin-bottom:70px;
+}
+
+main {
+    max-width: 100%;
+    margin: auto;
+   /* height:400px;*/
+}
+
+#errfn{
+    color: red;
+    width: 264%;
+    float: left;
+    /* text-align: center; */
+   /* border: 1px solid red;*/
+    margin: 0px 0px 0px -133px;
+    text-align: center;
+}
+.common-li-width{
+    width:97% !important;
+}
+.signin-search-part{
+   /* border:1px solid blue;*/
+}
+.login-part{
+    float: right !important;
+    margin: 0px -40px 0px 0px;
+    /*border:1px solid red;*/
+}
+.logout-div a{
+    /*border:1px solid red;*/
+    color:#225593!important;
+   
+}
+.logout-div{
+     margin-bottom: 28px;
+}
+.update-delete-button-div{
+    /*border: 1px solid red;*/
+    float: right;
+    height: 100px;
+    margin: 40px -82px 0 0;
+    padding-top: 20px;
+    width: 88px;
+}
+.login-span{
+    margin: 0 6px 0 -10px;
+    width: 57px ;
+}
+.signUp-span{
+    margin: 0 -8px 0 5px;
+    width: 80px !important;
+}
+.slash-login{
+    height: 29px;
+    margin: 14px -6px 0 1px;
+    width: 10px;
+    /*margin: 0 4px 0 0;*/
+}
+.login-signup-div span{
+    color: black;    
+    text-align: center;
+
+    font-size:12px;
+   /* width: 90px;*/
+    margin-top:15px;
+    /*float:right;
+    border:1px solid red;
+    margin: -39px -224px 0 0;;*/
+}
+.login-signup-div a{
+    color:#225593!important;
+    font-size: 19px;
+   /* margin: 0 0 0 33px;*/
+
+}
+header {
+   border-bottom: 1px solid #afafaf;
+    float: left;
+    height: 100px;
+    width: 100%;
+    background-image: url("../images/er12.jpg");
+}
+.pageNotFound{
+     background-image: url("../images/rsz_1final404.jpg");
+     height:441px;
+     width:98%;
+     margin:13px;
+}
+.pageNotFound h1{
+    text-align:center;
+}
+.container{
+
+    /*border: 1px solid red;*/
+    float: left;
+    margin: 0;
+    min-height: 400px !important;
+    width: 100%;
+    max-height:auto;
+}
+.handlebar-part{
+    min-height:300px;
+    max-height:auto;
+    /*width:100%;*/
+   /* border:1px solid grey;*/
+}
+.sidebar-part{
+   /* border:1px solid blue;*/
+    min-height:300px;
+}
+
+.websiteHead{
+    font-family: helvetica !important;
+    font-size: 50px !important;
+    color:white !important;
+
+}
+.row{
+   float:left;
+   width:100%;
+   /*margin:0 8% !important;*/
+   /*border:1px solid green;*/
+}
+footer{
+    float: left;
+    height: 50px;
+    width: 100%;
+    background-image: url("../images/er12.jpg");
+    background-position: center top;
+    bottom:0px;
+    position:fixed;
+}
+address{
+    color:white;
+    font-size:18px;
+    float:left;
+    margin: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h6 {
+    font-size: 1.05rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2;
+}
+.signin{
+    float:left;
+    /*border:1px solid yellow;*/
+   /* margin:0px 64px;
+    width:80%;
+    padding: 0 10%;*/
+}
+
+.signin h1{
+    font-size:28px;
+    font-family:helvetica;
+    text-align:center;
+}
+.seek-provide-a{
+    color:black;
+    text-decoration:none;
+    font-size:18px;
+    font-family:helvetica;
+    text-align:center;
+    margin: 50px 15%;
+    float:left;
+}
+
+.seek-provide-content{
+    width:100%;
+    border-radius:10px;
+    background-color:#89a1a1!important;
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+
+.signin-well{
+    border:1px solid transparent !important;
+    background-color:transparent !important;
+    border-radius:10px !important;
+}
+.signin-form-group{
+    float:left ;
+    margin:0px 10px;
+    width:21%;
+}
+.provider-sign-in-submit{
+    float:left ;
+    margin: 32px 5px !important;
+    text-align: center;
+    width:25%;
+}
+.provider-signin-form-group{
+    float: left;
+    margin: 0px 45px !important;
+    width: 25% !important;
+}
+.singin-form-control,.signin-submit-btn{
+    border-radius:10px;
+}
+.submit-form-group{
+     margin: 19px 39%;
+
+}
+.seeker-signUp-h{
+   float: right;
+    font-size: 15px !important;
+    margin: 10px -177px 0 0;
+}
+.seeker-signUp-h a{
+    color:#00375b;
+    text-decoration: underline;
+}
+.provider-signUp-h{
+    text-align:center;
+    margin: 0 0 -10px;
+    font-size: 19px !important;
+}
+.provider-signUp-h a{
+    color:#00375b;
+    text-decoration: underline;
+}
+
+.signIn-images-div{
+     margin: 5%;
+   /* margin-top:64px;*/
+
+}
+.sub-signin-content{
+  /*  padding:0px 10%;*/
+}
+.signIn-images-div img{
+    float:left;
+   /* margin: 0px 39px 0px 89px;*/
+}
+.float-right{
+    float:right;
+}
+.float-left{
+    float:left;
+}
+#sp-error-text{
+     margin: 26px 0 0 35px;
+     font-size:15px;
+}
+#s-error-container{
+
+    margin: 0 0 11px 9px;
+}
+#error-text-p{
+   /* font-size: 15px;
+    margin: 0px -186px 0px 0px;*/
+    font-size: 15px;
+    margin: 0 -234px 0 44px;
+    min-width: 222px;
+}
+#s-error-text{
+    width: 280px;
+    font-size: 15px;
+    margin: 14px -186px -76px 0;
+}
+#sp-error-text-down{
+    width: 100%;
+    font-size: 15px;
+}
+.sp-success-text-down{
+     width: 100%;
+    font-size: 15px;
+}
+.p-signin{
+    margin-left: 308px !important;
+}
+.p-server-error{
+   width:128%; 
+}
+.error-text{
+    color:red;
+    font-size: 15px;
+    /*float:left;*/
+    text-align:center;
+}
+/* Search page CSS starts*/
+.search-content{
+   /* border:1px solid red;*/
+    /*min-height:200px;
+    max-height:auto;*/
+    /*width:100%;*/
+    float:left;
+}
+.menubar-part{
+    /*border:1px solid green;*/
+    min-height:100px;
+    max-height:auto;
+    padding:0px;
+    font-size:18px;
+}
+/*.ride-list-section{
+    width:100%;
+}*/
+.from-to-date-part{
+    /*border:1px solid red;*/
+    height:100px;
+    background-color:#89a1a1;
+    float:left;
+    margin:10px 0px !important;
+}
+
+.search-form {
+    float:left;
+     margin-top:10px;
+   /* margin:0px 3%;*/
+}
+.search-form label{
+    width:100%;
+    text-align:center;
+}
+.search-form span{
+    text-align:center !important;
+    font-weight:lighter;
+
+}
+.submit-search-form {
+    margin:31px 0px;
+}
+.search-submit-btn{
+    margin:0 30% !important;
+}
+
+.ride-list-section{
+   /* border:1px solid red;*/
+    min-height:150px;
+    max-height:auto;
+    width:100%;
+    margin-bottom: 100px;
+}
+.seacrh-ul{
+    width:105%;
+    padding:20px;
+    list-style-type: none;
+}
+
+.seacrh-ul li{
+   min-height:175px;
+  /*min-height:200px;*/
+   width:100%;
+   border-bottom:1px solid #CCCCCC;
+   padding:10px;
+   color: #587c7c;
+}
+.age-name-details{
+    height: 45px;
+    margin-top: 14px;
+    /*padding-left: 24px;*/
+    width: 169px;
+    text-align:center;
+    /*width:85px;
+    height:45px;
+    padding-left:7px;
+    margin-top:14px;*/
+}
+.img-container-div{
+    width:170px;
+    float:left;
+    padding: 0 45px;
+}
+.ride-provider-img{
+   border-radius: 38px;
+    float: left;
+    height: 75px;
+    width: 75px;
+}
+
+.name-det{
+    color:black;
+    font-weight:bold;
+    text-align:center;
+    font-size:13px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.age-name-details span{
+    width:100%;
+    font-size:12px;
+    font-family:arial;
+    float:left;
+}
+.search-h2{
+    font-family:arial;
+}
+.ride-list-section li:first-child{
+     border-top:1px solid #CCCCCC; 
+}
+.seacrh-ul li:hover{
+    background-color:#EFF8FD;
+}
+.ride-provider-img-d#EFF8FDiv{
+     border-right:1px solid #CCCCCC;
+     height:145px;
+}
+.ride-provider-img-details{
+    min-height:145px;
+     font-family:arial;
+}
+
+.budget-part{
+    height:138px;
+    width:115px;
+    padding:5px;
+    float:right;
+     margin-top:-23px;
+}
+.budget-part span{
+    width:100%;
+    float:left;
+    font-size:12px;
+    text-align:center;
+   
+}
+.price-range{
+    font-size:50px !important;
+    font-weight:bold;
+}
+.price-part{
+    /*color:#00A87E;*/
+    color:#008846;
+    margin-bottom:7px;
+}
+.seat-span {
+    color:black;
+}
+.seat-span b{
+    font-size:20px !important;
+    margin-right:5px;
+}
+.travel-info-part{
+   /* border:1px solid green;*/
+    float:left;
+   width: 77%;
+    min-height:138px;
+}
+.trave-day-time-det{
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 27px;
+    color:black;
+    float:left;
+    width:100%;
+}
+.source-to-dest{
+    font-size:16px;
+    color: #413d35;
+    float:left;
+     width:100%;
+}
+.source-to-dest span{
+    float:left;
+    margin:0px 3px;
+}
+.source-dest-in-detail{
+    float:left;
+     width:100%;
+}
+.source-dest-in-detail img{
+   height: 11px;
+   margin: 5px 7px 0 2px;
+    width: 11px;
+    float:left;
+}
+.source-dest-in-detail span{
+    float:left;
+    font-size:15px;
+}
+.car-name{
+    font-size:15px;
+    width:100%;
+    margin:0px 0px 0px 2px;
+    float:left;
+}
+.psg-ol{
+    float:left;
+}
+.passenger-li{
+    float:left;
+}
+.restriction-div{
+    float:left;
+    width:100%;
+
+}
+.restriction-div ul{
+    list-style-type: none;
+    float:left;
+    margin-left:-50px;
+}
+.restriction-div li {
+    min-height:34px !important;
+    width:34px;
+    float:left;
+    margin:0px 2px;
+    border:none !important;
+}
+.restriction-div li img {
+    height:34px;
+    width:34px;
+    float:left;
+    border-radius:15px;
+}
+.book-now{
+    background-color:#d4423c !important;
+    margin: 4px 0 0 15px;
+}
+/* Search page CSS ends*/
+
+/*  Profile page CSS starts*/
+.menubar-ul{
+    float:left;
+    width:100%;
+}
+.menubar-ul li{
+    width:100%;
+    border-bottom:1px solid #DDDDDD !important;
+    border-right:1px solid #DDDDDD;
+}
+.active{
+    border-right:1px solid transparent !important;
+     width:100%;
+     border-top:1px solid #dddddd;
+}
+.menubar-ul li a{
+    border:none !important;
+    border-radius:none;
+    width:100%;
+}
+
+.user-profile-content{
+    margin-bottom: 100px;
+}
+.User-name-img{
+    height:150px;
+    width:100%;
+    border-bottom:1px solid #dddddd;
+    padding:10px;
+    float:left;
+}
+.User-name-img img{
+    height:130px;
+    width:130px;
+    float:left;
+    border-radius:70px;
+}
+.name-details{
+   /* border:1px solid red;*/
+    height:130px;
+    float:left;
+    width:73%;
+    padding:10px;
+}
+.update-profile-btn{
+    margin: 6px 0px 0px 0px;
+    font-size: 10px;
+    width: 91px;
+    height: 24px;
+    padding: 5px;
+}
+.recent-notification{
+    color:#767676;
+    float:left;
+    width:100%;
+    
+}
+.notification-ul{
+    float:left;
+    list-style-type:disc;
+    width:100%;
+    margin-left:-26px;
+
+}
+.notification-ul li{
+    float:left;
+    font-size:15px;
+    width:100%;
+}
+.activities-ul{
+    float:left;
+    list-style-type:disc;
+    width:100%;
+    margin-left:-26px;
+}
+.activities-ul li{
+    float:left;
+    width:50%;
+     font-size:15px;
+}
+.activities-ul li b{
+    font-size:20px;
+}
+.profile-h2{
+    font-size:15px;
+}
+.profile-h2-span{
+    text-decoration:underline !important; 
+    color:#286090 !important;
+}
+.profile-h2-span-contact{
+     color:#286090 !important;
+     font-family: serif;
+}
+.btn{
+    font-family:arial;
+}
+.btn-success{
+    background-color:#008a00 !important;
+}
+.btn-danger{
+   background-color: #d4423c !important;  
+}
+.update-delete{
+   
+    font-size: 13px;
+    height: 19px;
+    margin: 4px 0 0 15px;
+    padding: 0 10px;
+}
+
+/*  Profile page CSS ends*/
+
+/*  Provided page CSS starts*/
+.provide-ride-now{
+    font-size: 18px;
+    height: 50px;
+    margin: 10px;
+    width: 100%;
+    background-color: #d4423c!important;
+    padding: 9px 0;
+}
+.provide-ride-now span{
+    text-decoration:underline;
+}
+.provide-ride-now a{
+    color:white;
+}
+.providedRide-sub-info{
+    border-top:1px solid black;
+     margin: 30px 0 -96px 0px;
+     float:left;
+     width:100%;
+}
+.sub-info-heading{
+    background-color: white;
+    float: left;
+    margin: -13px 0 0 1px;
+    padding: 0 18px;
+    width: auto;
+}
+.passenger-details-div{
+    float:left;
+    font-size:13px;
+    color:#767676;
+    min-height:10px;
+
+}
+.passenger-details-div ol{
+    float:left;
+    border:none;
+    list-style-type: none;
+     padding: 0;
+    margin-bottom: 10px;
+    margin-left: -3px;
+    margin-top: -9px;
+}
+.passenger-li {
+     border: medium none !important;
+    float: left !important;
+    font-size: 12px !important;
+    height: 0 !important;
+    margin: 10px 0 0 4px;
+    min-height: 5px !important;
+    padding: 0 !important;
+    width: auto !important;
+
+}
+.passenger-li a{
+    font-weight:bold;
+    color:#767676;
+    margin:0px 0px 0px 0px;
+    float:left;
+}
+.history-ul  li{
+    background-color: #F1F0F0!important;
+    color:#4c7575 !important;
+}
+.history-passender-div{
+    color:#6d6d6d !important;
+}
+.history-passender-div li a{
+    color:#6d6d6d !important;
+}
+
+.history-price-part{
+    color:#008031!important;
+}
+
+
+.ride-pro-form-dialog{
+    width:70%;
+}
+.ride-pro-form-labels{
+     font-family: arial;
+    font-size: 16px;
+}
+.ride-pro-model-title{
+    font-family: arial;
+    font-size: 29px;
+}
+.ride-pro-model-span{
+    width:100%;
+    font-family:arial;
+     font-size: 16px;
+    margin:0px 0px 0px 0px;
+}
+.ride-pro-model-checkbox{
+    padding: 19px;
+}
+.checkbox-label{
+    width:100%;
+    font-family:arial;
+    font-size: 16px;
+    margin-left:10px;
+}
+.yes-no-btn{
+    text-align:center;
+}
+/*  Provided page CSS ends*/
+
+/*SignUp page CSS starts*/
+.sign-up-details{
+    /*border :1px solid red;*/
+    min-height:300px;
+}
+.seeker-sign-sub-info{
+    border-top:1px solid transparent !important;
+}
+.signUp-sub-info{
+    border-top:1px solid #374A59 ;
+    margin: 35px 0 0;
+     float:left;
+     min-height:110px;
+     width:100%;
+}
+.signUp-sub-info-heading{
+    background-color: white;
+    float: left;
+    margin: -13px 0 0 1px;
+    padding: 0 18px;
+    width: auto;
+    color:#374A59;
+    font-size:25px;
+}
+.signup-form-labels{
+    font-size:15px;
+    font-family:arial;
+    margin-left: 31px;
+    text-align:left;
+}
+.form-grp-div{
+    margin:13px;
+}
+
+.clsDatePicker {
+    z-index: 100000;
+}
+/*Signup page CSS ends*/
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    font-size: 10pt;
+}
+
+
+

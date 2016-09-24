@@ -1,0 +1,125 @@
+<a class="btn btn-danger provide-ride-now" href="/search" role="button">
+		To seek a ride- <span>Click here!</span></a>
+		<!--<button class=" btn btn-danger provide-ride-now">
+			<a href="/search">To seek a ride- <span>Click here!</span></a>
+		</button>-->
+		{{#if bookedPlan}}
+		<div class="providedRide-sub-info">
+			<h1 class="sub-info-heading">Rides Booked</h1>
+			
+			<div class="ride-list-section float-left ">
+				<ul class="seacrh-ul float-left " id="seeked-ul-list">
+				{{#each bookedPlan}}
+					<li class="float-left row common-li-width" id={{this._id}}  seats-offered={{this.totalSeatsLeft}} seats-needed={{this.seats_needed}}>
+
+						<div class="ride-provider-img-div col-sm-3 col-md-3 col-lg-3">
+							<div class="img-container-div">
+								<img src="/{{this.providerImg}}" alt="Smiley face" class="ride-provider-img"/>
+							</div>
+							
+							<div class="float-left age-name-details">
+								<span class="name-det">{{this.providerFirstName}} {{providerLastName}}</span>
+								<span style="color:black">Gender: {{this.providerGender}}</span>
+                                <span style="color:black" >Email: {{this.providerEmail}}</span>
+                                <span style="color:black" >Phone number: {{this.providerPhoneNo}}</span>
+								<!--<span >46 Years old</span>-->
+							</div>
+						</div>
+						<div class="ride-provider-img-details col-sm-9 col-md-9 col-lg-9">
+							<div class="travel-info-part">
+								<span class="trave-day-time-det">{{travelPlanInfo.travel_start_time}}</span>
+								<div class="source-to-dest">
+									<span>{{travelPlanInfo.source_state}}</span>
+									<span class="glyphicon glyphicon-arrow-right"></span>
+									<span>{{travelPlanInfo.destination_state}}</span>
+								</div>
+								<div class="source-dest-in-detail">
+									<img src="/public/images/source1.png" alt="source" />
+									<span>{{travelPlanInfo.source_city}} , {{travelPlanInfo.source_street}}<span>
+								</div>
+								<div class="source-dest-in-detail">
+									<img src="/public/images/destination.png" alt="source" />
+									<span>{{travelPlanInfo.destination_city}} , {{travelPlanInfo.destination_street}}<span>
+								</div>
+								<span class="car-name">Car :<b>{{this.providerCarName}}</b></span>
+								<span class="car-name">No.Of Seats Booked :<b>{{this.seats_needed}}</b></span>
+									
+							</div>
+							<div class="budget-part">
+								<div class="price-part">
+									<span class="price-range">${{travelPlanInfo.price}}</span>
+									<span >per co-traveller</span>
+								</div>
+								<span class="seat-span"><b>{{this.totalSeatsLeft}}</b>Seats left</span>
+								<button type="button" data-toggle="modal" data-target="#rideSeekUpdate" class="btn btn-success update-delete">Update Now</button>
+								<button type="button" data-toggle="modal" data-target="#rideSeekDelete" class="btn btn-danger update-delete">Cancel Ride</button>
+							</div>
+
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		{{/if}}
+
+		<!--{{#if historyBookedPlan}}
+		<div class="providedRide-sub-info">
+			<h1 class="sub-info-heading history-rides">Ride's seeked History</h1>
+
+			<div class="ride-list-section float-left ">
+				<ul class="seacrh-ul history-ul float-left ">
+					{{#each historyBookedPlan}}
+					<li class="float-left row common-li-width" id={{this._id}}  seats-offered={{travelPlanInfo.seats_offered}}>
+
+						<div class="ride-provider-img-div col-sm-3 col-md-3 col-lg-3">
+							<div class="img-container-div">
+								<img src="/{{this.providerImg}}" alt="Smiley face" class="ride-provider-img"/>
+							</div>
+							
+							<div class="float-left age-name-details">
+								<span class="name-det">{{this.providerFirstName}} {{this.providerLastName}}</span>
+								<span style="color:black">Gender: {{this.providerGender}}</span>
+                                <span style="color:black" >Email: {{this.providerEmail}}</span>
+                                <span style="color:black" >Phone number: {{this.providerPhoneNo}}</span>
+								<!--<span >46 Years old</span>-->
+							</div>
+						</div>
+						<div class="ride-provider-img-details col-sm-9 col-md-9 col-lg-9">
+							<div class="travel-info-part">
+								<span class="trave-day-time-det">{{travelPlanInfo.travel_start_time}}</span>
+								<div class="source-to-dest">
+									<span>{{travelPlanInfo.source_state}}</span>
+									<span class="glyphicon glyphicon-arrow-right"></span>
+									<span>{{travelPlanInfo.destination_state}}</span>
+								</div>
+								<div class="source-dest-in-detail">
+									<img src="/public/images/source1.png" alt="source" />
+									<span>{{travelPlanInfo.source_city}} , {{travelPlanInfo.source_street}}<span>
+								</div>
+								<div class="source-dest-in-detail">
+									<img src="/public/images/destination.png" alt="source" />
+									<span>{{travelPlanInfo.destination_city}} , {{travelPlanInfo.destination_street}}<span>
+								</div>
+								<span class="car-name">Car :<b>{{this.providerCarName}}</b></span>
+									
+							</div>
+							<div class="budget-part">
+								<div class="price-part">
+									<span class="price-range">${{travelPlanInfo.price}}</span>
+									<span >per co-traveller</span>
+								</div>
+								<span class="seat-span"><b>{{travelPlanInfo.seats_offered}}</b>Seats left</span>
+								<button type="button" data-toggle="modal" data-target="#rideSeekUpdate" class="btn btn-success update-delete">Update Now</button>
+								<button type="button" data-toggle="modal" data-target="#rideSeekDelete" class="btn btn-danger update-delete">Cancel Ride</button>
+							</div>
+
+						</div>
+					</li>
+					{{/each}}
+					
+				</ul>
+			</div>
+		</div>
+		{{/if}}-->
+		

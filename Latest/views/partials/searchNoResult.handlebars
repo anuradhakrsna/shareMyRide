@@ -1,0 +1,73 @@
+<section class="row">
+
+	<div class="col-md-12 user-profile-content">
+
+
+		<!--<button class=" btn btn-danger provide-ride-now">
+			<a href="/search">To seek a ride- <span>Click here!</span></a>
+		</button>-->
+
+		<div class="providedRide-sub-info">
+			<h1 class="sub-info-heading">Search Results</h1>
+
+            <br>
+
+            <h2>No travel plans available for this search criteria. Try searching with different criteria</h2>
+
+            <div class="">
+                <img src="/public/images/no-results.png" alt="Smiley face" class=""/>
+            </div>
+            <form id="search-form" method="post" action="/user/seeked">
+
+            </form>
+
+
+
+
+		</div>
+
+	</div>
+
+	<div class="modal fade" id="rideSeekUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title ride-pro-model-title" id="myModalLabel">Update The Booked Ride</h1>
+	        </div>
+	        <div class="modal-body">
+	        	<form class="form-horizontal">
+				    
+				    <div class="form-group">
+					    <label  class="col-sm-6 col-md-6 col-lg-6 control-label ride-pro-form-labels">No.of seats to be booked</label>
+					    <div class="col-sm-4 col-md-4 col-lg-4">
+					        <input type="number" class="form-control" placeholder="eg.4">
+					    </div>
+				    </div>
+				    
+				</form>
+	        </div>
+	        <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Update</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<div class="modal fade" id="rideSeekDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title " id="myModalLabel">Are you sure you want to cancel your booking?</h1>
+	        </div>
+	        <div class="modal-footer  yes-no-btn">
+		        <button type="button" class="btn btn-default" >Yes</button>
+		        <button type="button" class="btn btn-default " data-dismiss="modal" >No</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+</section>

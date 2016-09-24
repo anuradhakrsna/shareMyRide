@@ -1,0 +1,38 @@
+<div class="recent-notification">
+			<h1>Notifications</h1>
+			{{#if userType}}
+			<ul class="notification-ul">
+				{{#if seekerDetail}}
+				<li>You have recently booked a ride on {{dateSeek}} th with {{seekName}}</li>
+				{{else}}
+				<li>You have recently booked no rides</li>
+				{{/if}}
+			</ul>
+			<ul class="notification-ul">
+				{{#if providerDetail}}
+				<li>You have recently posted to provide a ride on {{dateRide}} </li>
+				{{else}}
+				<li>you have posted no rides recently</li>
+				{{/if}}
+			</ul>
+			{{else}}
+				<ul class="notification-ul">
+					{{#if seekerDetail}}
+						<li>You have recently booked a ride on {{dateSeek}} th with {{seekName}}</li>
+					{{else}}
+						<li>You have recently booked no rides</li>
+					{{/if}}
+				</ul>
+			{{/if}}
+</div>
+<div class="recent-notification">
+		<h1>Activities</h1>
+			<ul class="activities-ul">
+				{{#if userType}}
+					<li>No of Rides seeked: <b>{{seekcount}}</b></li>
+					<li>No of Rides Provided:<b>{{provideCount}}</b></li>
+				{{else}}
+					<li>No of Rides seeked: <b>{{seekcount}}</b></li>
+				{{/if}}
+			</ul>
+</div>

@@ -1,0 +1,247 @@
+<section class="row">
+	<div class="col-sm-2 col-md-2 col-lg-2 menubar-part">	
+	    <ul class="nav nav-tabs tabs-left menubar-ul">
+
+	    </ul>
+	</div>
+	<div class="col-sm-10 col-md-10 col-lg-10 user-profile-content">
+
+        <script>
+            $(document).ready(function() {
+            $("form").submit(function(e){
+                var x;
+
+                $("#bookbutton").click(function(){
+                    $("#myModal").modal();
+                });
+
+                if (confirm("sure You want to book this ride !") == true) {
+                    x = "You pressed OK!";
+                } else {
+                    e.preventDefault();
+                }
+
+
+            });
+            });
+
+        </script>
+
+		<!--<button class=" btn btn-danger provide-ride-now">
+			<a href="/search">To seek a ride- <span>Click here!</span></a>
+		</button>-->
+
+		<div class="providedRide-sub-info">
+			<h1 class="sub-info-heading">Results</h1>
+
+			<div class="ride-list-section float-left ">
+            {{#each travelplanData}}
+
+            <form id="search-form" method="post" action="/user/seeked">
+				<ul class="seacrh-ul float-left ">
+					<li class="float-left row">
+						<div class="ride-provider-img-div col-sm-3 col-md-3 col-lg-3">
+                        <div class="img-container-div">
+                            <img src="/public/images/default-img.png" alt="Smiley face" class="ride-provider-img"/>
+                        </div>
+                            <div class="float-left age-name-details" style="margin-top:0px !important">
+
+
+
+                                {{#each this.travelprovidermemberdata}}
+                                    <h2> {{this.first_name}} {{this.last_name}}</h2>
+                                    <input type="hidden" name="member_id" value="{{this._id}}" id="idTourDateDetailsHidden">
+
+
+                                <span style="margin-top:-10px;color:black">Gender: {{this.gender}}</span>
+                                    <span style="color:black" >Email: {{this.email}}</span>
+                                    <span style="color:black" >Phone number: {{this.phone_number}}</span>
+                                {{/each}}
+                            </div>
+							<div class="restriction-div">
+								<ul>
+
+								</ul>
+							</div>
+						</div>
+
+
+                        <div class="ride-provider-img-details col-sm-9 col-md-9 col-lg-9">
+                            <div class="travel-info-part">
+                                <span class="trave-day-time-det"> {{this.travel_start_time}}</span>
+                                <div class="source-to-dest">
+                                    <span>{{this.source_city}}</span>
+                                    <span class="glyphicon glyphicon-arrow-right"></span>
+                                    <span>{{this.destination_city}}</span>
+                                </div>
+                                <div class="source-dest-in-detail">
+
+                                    <img src="/public/images/source1.png" alt="source" />
+                    <span>Source : {{this.source_street}} </span><span>,</span> <span>{{this.source_city}}</span>, <span> {{this.source_state}}</span>
+                                </div>
+                                <div class="source-dest-in-detail">
+
+                                    <img src="/public/images/destination.png" alt="source" />
+
+                                    <span>  Destination : {{this.destination_street}} </span>, <span>,{{this.destination_city}}</span> ,<span>, {{this.destination_state}}</span>
+
+                                </div>
+
+                                {{#each this.travelprovidercardata}}
+
+                                    <span class="car-name">
+
+                                  Car Name: {{this.name}},
+                                    Make Year: {{this.make_year}},
+                                   Registration number: {{this.registration_number}},
+                                    Color : {{this.color}}
+
+</span>
+                                {{/each}}
+
+
+                            </div>
+                            <div class="budget-part">
+                                <div class="price-part">
+                                    <span class="price-range">${{this.price}}</span>
+                                    <span >per co-traveller</span>
+                                </div>
+
+
+                                {{#each this.alreadybooked}}
+                                    <div id="errfn" style="color:red">  {{this}}  </div>
+
+
+
+
+
+                                {{/each}}
+                                    {{#each this.seatsover}}
+
+
+                                        {{this}}
+
+
+
+                                    {{/each}}
+
+
+                                     {{#each this.totalseats}}
+                                     <span class="seat-span">
+
+
+
+                                   {{this}}
+
+
+                                         seats left</span>
+
+                                         <br>
+                                         <span >Select seats :</span>
+                                         <select class="btn btn-mini" name="seats_needed" style="margin:0px 0px 0px 20px">
+
+
+                                                 {{#each ../this.seatsdata}}
+
+
+
+                                                 <option>  {{this}}</option>
+
+
+                                             {{/each}}
+                                         </select>
+                                         <button type="submit" id="bookbutton" class="btn btn-success update-delete">Book ride</button>
+
+
+
+                                     {{/each}}
+
+
+
+
+
+
+
+                                <input type="hidden" name="description" value="" >
+                                <input type="hidden" name="travel_plan_id" value="{{this._id}}" >
+
+
+                    <!--  <button type="button" data-toggle="modal" data-target="#rideSeekUpdate" class="btn btn-success update-delete">Book ride</button> -->
+
+                            </div>
+
+                        </div>
+                    	</li>
+				</ul>
+            </form>
+            {{/each}}
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div class="modal fade" id="rideSeekUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title ride-pro-model-title" id="myModalLabel">Update The Booked Ride</h1>
+	        </div>
+	        <div class="modal-body">
+	        	<form class="form-horizontal">
+				    
+				    <div class="form-group">
+					    <label  class="col-sm-6 col-md-6 col-lg-6 control-label ride-pro-form-labels">No.of seats to be booked</label>
+					    <div class="col-sm-4 col-md-4 col-lg-4">
+					        <input type="number" class="form-control" placeholder="eg.4">
+					    </div>
+				    </div>
+				    
+				</form>
+	        </div>
+	        <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Update</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<div class="modal fade" id="rideSeekDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog " role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h1 class="modal-title " id="myModalLabel">Are you sure you want to cancel your booking?</h1>
+	        </div>
+	        <div class="modal-footer  yes-no-btn">
+		        <button type="button" class="btn btn-default" >Yes</button>
+		        <button type="button" class="btn btn-default " data-dismiss="modal" >No</button>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

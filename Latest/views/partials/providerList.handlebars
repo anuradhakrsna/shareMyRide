@@ -1,0 +1,83 @@
+{{#if rideseeker}}
+		<h3> You have signed in as Ride Seeker and to create rides please update your profile as ride provider.</h3>
+{{/if}}
+{{#if rideprovider}}
+<button type="button" data-toggle="modal" data-target="#rideProModel" class=" btn btn-danger provide-ride-now">
+			To Provide Ride- <span>Click here!</span>
+</button>
+		{{#if createdTravelPlan}}
+		<div class="providedRide-sub-info">
+			<h1 class="sub-info-heading">Rides to be provided</h1>
+			<div class="ride-list-section float-left ">
+				<ul class="seacrh-ul float-left " id="providerList">
+				{{#each createdTravelPlan}}
+					<li class="float-left row common-li-width"  id={{this._id}}  seats-offered={{this.seats_offered}} seats-left={{this.seatsLeft}}>
+						<!--<input type="hidden" id="listId" value="{{this._id}}" name="listId">-->
+						<div class="ride-provider-img-div col-sm-3 col-md-3 col-lg-3">
+							<div class="img-container-div">
+								<img src="/{{userInfo.image_path}}" alt="Smiley face" class="ride-provider-img"/>
+							</div>
+							<div class="float-left age-name-details">
+								<span class="name-det">{{userInfo.first_name}} {{userInfo.last_name}}</span>
+								<span style="color:black">Gender: {{userInfo.gender}}</span>
+                                <span style="color:black" >Email: {{userInfo.email}}</span>
+                                <span style="color:black" >Phone number: {{userInfo.phone_number}}</span>
+							</div>
+						</div>
+						<div class="ride-provider-img-details col-sm-9 col-md-9 col-lg-9">
+							<div class="travel-info-part">
+								<span class="trave-day-time-det"> {{this.travel_start_time}}</span>
+								<div class="source-to-dest">
+									<span>{{this.source_state}}</span>
+									<span class="glyphicon glyphicon-arrow-right"></span>
+									<span>{{this.destination_state}}</span>
+								</div>
+								<div class="source-dest-in-detail">
+									<img src="/public/images/source1.png" alt="source" />
+									<span>{{this.source_city}} , {{this.source_street}}<span>
+								</div>
+								<div class="source-dest-in-detail">
+									<img src="/public/images/destination.png" alt="source" />
+									<span>{{this.destination_city}} , {{this.destination_street}}<span>
+								</div>
+								<!--<button type="button" data-toggle="modal" data-target="#rideBookings" id="viewBookings" class="btn btn-success update-delete">View Bookings</button>
+								<input type="hidden" id="seekerInfo" name="seekerInfo" value="{{this.seekerInfo}}">-->
+								{{#if this.seekerInfo}}
+								<table>
+									<thead>
+										<td>Name</td>
+										<td>Email</td>
+										<td>Phone Number</td>
+										<td>Seats Booked</td>
+									</thead>
+								{{#each this.seekerInfo}}
+									<tr>
+										<td>{{this.userInfo.first_name}}</td>
+										<td>{{this.userInfo.email}}</td>
+										<td>{{this.userInfo.phone_number}}</td>
+										<td>{{this.seats_needed}}</td>
+									</tr>
+								{{/each}}
+								</table>
+								{{else}}
+									<span>No Booking</span>
+								{{/if}}	
+							</div>
+							<div class="budget-part">
+								<div class="price-part">
+									<span class="price-range">${{this.price}}</span>
+									<span >per co-traveller</span>
+								</div>
+								<span class="seat-span"><b>{{seatsLeft}}</b>Seats left</span>
+								<button type="button" data-toggle="modal" data-target="#rideProUpdate-{{this._id}}" id="providerUpdate-{{this._id}}" class="btn btn-success update-delete">Update Now</button>
+								<button type="button" data-toggle="modal" data-target="#rideProDelete-{{this._id}}" id="providerDelete-{{this._id}}" class="btn btn-danger update-delete">Delete Ride</button>
+							</div>
+
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		{{/if}}
+{{/if}}	
