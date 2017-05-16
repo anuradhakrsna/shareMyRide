@@ -46,3 +46,14 @@ Step5:after all the packes are installed , the node-modules folder will appear a
   
 Step6: In the browser type "http://localhost:3000/signin" and now you will be able to see the car-pooling website at your convenience. 
   
+![alt text](https://github.com/anuradhakrsna/shareMyRide/blob/master/Snapshots/firstPage.PNG)
+
+![alt text](https://github.com/anuradhakrsna/shareMyRide/blob/master/Snapshots/signinPage.PNG)
+
+![alt text](https://github.com/anuradhakrsna/shareMyRide/blob/master/Snapshots/ProfilePage.PNG)
+
+![alt text](https://github.com/anuradhakrsna/shareMyRide/blob/master/Snapshots/ProvidingRidePage.PNG)
+
+![alt text](https://github.com/anuradhakrsna/shareMyRide/blob/master/Snapshots/rideProviderProfilePicPage.PNG)
+
+![alt text](https://github.com/anuradhakrsna/shareMyRide/blob/master/Snapshots/searchPage.PNG)
